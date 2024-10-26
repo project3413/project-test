@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포토갤러리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    
+    <div class="header-top"></div>
+    <div class="header-bottom">
+      <img src="https://itsoft.halla.ac.kr/img/common/han_logo.png" alt="한라대학교 로고" class="logo">
+      <nav>
+        <a href="#">학과소개</a>
+        <a href="#">학사안내</a>
+        <a href="#">게시판</a>
+        <a href="#">공지사항</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery-header-container">
+      <div class="gallery-header">
+        <h1>포토갤러리</h1>
+        <div class="sub-menu">
+          <a href="https://www.instagram.com/halla_it_software/" target="_blank">학과 SNS</a>
+          <a href="#">학과 Q&A</a>
+          <a href="#">자유게시판</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter">
+      <!-- 첫 번째 전체 버튼 -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown('dropdown-content-1')" class="dropdown-button">전체</button>
+        <div id="dropdown-content-1" class="dropdown-content">
+          <a href="#">전체</a>
+          <a href="#">내용</a>
+          <a href="#">제목</a>
+        </div>
+      </div>
+
+      <button class="mint-button">등록</button>
+
+      <!-- 세 번째 전체 버튼 -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown('dropdown-content-2')" class="dropdown-button">전체</button>
+        <div id="dropdown-content-2" class="dropdown-content">
+          <a href="#">전체</a>
+          <a href="#">내용</a>
+          <a href="#">제목</a>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="검색">
+        <button class="search-button">
+          <img src="https://itsoft.halla.ac.kr/img/common/pro_search.png" alt="검색 아이콘">
+        </button>
+      </div>
+    </div>
+
+    <section class="gallery">
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20241014133737_03d017d11b9018aba8f8.png" alt="2024 문필체전">
+        <h2>2024 문필체전</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20241011144556_34ae0a8750bb44c92cad.jpg" alt="2024 문필체전">
+        <h2>2024 문필체전</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20241007113649_03d017d11b9018aba8f8.png" alt="IT 소프트웨어 HL 취업성과">
+        <h2>IT 소프트웨어 HL 취업성과</h2>
+        <p>2024 HL IT 소프트웨어 취업 성과</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240923154914_03d017d11b9018aba8f8.png" alt="창업동아리_아이디어경진대회">
+        <h2>창업동아리_아이디어경진대회</h2>
+        <p>내용</p>
+      </a>
+    
+      <!-- 추가된 게시물들 -->
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240913141726_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_방치형 용사 키우기">
+        <h2>2024 캡스톤디자인_방치형 용사 키우기</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240912155155_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_Orange3 암진단 프로그램">
+        <h2>2024 캡스톤디자인_Orange3 암진단 프로그램</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240910150017_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_노인 건강관리시스템">
+        <h2>2024 캡스톤디자인_노인 건강관리시스템</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240909151525_c908da412042c7a7cc99.jpg" alt="2024 강원SW페스티벌 수상">
+        <h2>2024 강원SW페스티벌 수상</h2>
+        <p>내용</p>
+      </a>
+
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240913141726_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_방치형 용사 키우기">
+        <h2>2024 캡스톤디자인_방치형 용사 키우기</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240912155155_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_Orange3 암진단 프로그램">
+        <h2>2024 캡스톤디자인_Orange3 암진단 프로그램</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240910150017_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_노인 건강관리시스템">
+        <h2>2024 캡스톤디자인_노인 건강관리시스템</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240909151525_c908da412042c7a7cc99.jpg" alt="2024 강원SW페스티벌 수상">
+        <h2>2024 강원SW페스티벌 수상</h2>
+        <p>내용</p>
+      </a>
+
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240913141726_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_방치형 용사 키우기">
+        <h2>2024 캡스톤디자인_방치형 용사 키우기</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240912155155_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_Orange3 암진단 프로그램">
+        <h2>2024 캡스톤디자인_Orange3 암진단 프로그램</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240910150017_03d017d11b9018aba8f8.png" alt="2024 캡스톤디자인_노인 건강관리시스템">
+        <h2>2024 캡스톤디자인_노인 건강관리시스템</h2>
+        <p>내용</p>
+      </a>
+      <a href="#" class="gallery-item">
+        <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240909151525_c908da412042c7a7cc99.jpg" alt="2024 강원SW페스티벌 수상">
+        <h2>2024 강원SW페스티벌 수상</h2>
+        <p>내용</p>
+      </a>
+    </section>
+    
+    <main>
+      <!-- 기존의 갤러리 섹션과 필터 부분 -->
+    
+      <section class="gallery">
+        <!-- gallery-item 내용들 -->
+      </section>
+
+     <!-- "예전 사진들" 제목 추가 -->
+  <div class="previous-gallery-title">
+    <h2>예전 사진들</h2>
+  </div>
+
+   <!-- 예전 사진들 섹션 -->
+   <div class="previous-gallery">
+    <img src="	https://itsoft.halla.ac.kr/webedit_naver/upload/20220524101321_8be1dfc466dce2f3414c.jpg" alt="예전 사진 1">
+    <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20220524101104_8be1dfc466dce2f3414c.jpg" alt="예전 사진 2">
+    <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20230519100842_e1133f58a3a3970c84bc.png" alt="예전 사진 3">
+    <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20230808143123_0a6694792071d358f7ec.jpg" alt="예전 사진 4">
+    <img src="https://itsoft.halla.ac.kr/webedit_naver/upload/20240516153043_a57b3e116a8f23b51c11.png" alt="예전 사진 5">
+    <!-- 필요에 따라 더 많은 이미지를 추가할 수 있습니다. -->
+  </div>
+
+      <!-- 페이지네이션 -->
+      <div class="pagination">
+        <button class="page-button first-page">&laquo;</button>
+        <button class="page-button prev-page">&lt;</button>
+        <button class="page-button">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">4</button>
+        <button class="page-button">5</button>
+        <button class="page-button">6</button>
+        <button class="page-button">7</button>
+        <button class="page-button">8</button>
+        <button class="page-button">9</button>
+        <button class="page-button">10</button>
+        <button class="page-button next-page">&gt;</button>
+        <button class="page-button last-page">&raquo;</button>
+      </div>
+    </main>
+    
+ 
+
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="https://itsoft.halla.ac.kr/img/common/han_logo_w.png" alt="한라대학교 로고" class="footer-logo">
+      <div class="footer-info">
+        <p>강원특별자치도 원주시 한라대길 28 한라대학교 IT소프트웨어학과 [우] 26404</p>
+        <p>TEL : (033) 760-1282 &nbsp;&nbsp; FAX : (033) 760-1281</p>
+        <p>개인정보처리방침 &nbsp;&nbsp; 영상정보처리기기 운영 · 관리 방침 &nbsp;&nbsp; 이메일무단수집거부</p>
+        <p>COPYRIGHT (C) HALLA UNIVERSITY. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+  
+  </footer>
+  <main>
+    <!-- 위로 이동 버튼 -->
+    <button id="scrollToTopBtn" class="scroll-to-top">▲</button>
+  </main>
+  
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

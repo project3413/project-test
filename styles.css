@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  width: 100%;
+}
+
+.header-top {
+  background-color: #007bff;
+  height: 40px;
+}
+
+.header-bottom {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.header-bottom nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-bottom nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-bottom nav a:hover {
+  color: #007bff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.gallery-header-container {
+  padding-left: 200px;
+}
+
+.gallery-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.gallery-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #007bff;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.sub-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sub-menu a:hover {
+  color: #007bff;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  gap: 0px;
+  padding-left: 200px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+}
+
+.dropdown-button::after {
+  content: "▼"; /* 화살표 아이콘 */
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.mint-button {
+  background-color: #87CEEB;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-left: 400px;
+}
+
+.mint-button:hover {
+  background-color: #6BB7DB;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-button {
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  display: block;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 텍스트 색상을 부모 요소에 맞춤 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  transition: transform 0.2s; /* 호버 시 애니메이션 효과 */
+}
+
+.gallery-item:hover {
+  transform: scale(1.03); /* 호버 시 약간 확대 효과 */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.gallery-item p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 10px 10px;
+}
+
+/* 페이지 전체에 항상 스크롤바 표시 */
+html {
+  overflow-y: scroll;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.page-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.page-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.first-page, .prev-page, .next-page, .last-page {
+  font-weight: bold;
+}
+
+.first-page:hover, .last-page:hover, .prev-page:hover, .next-page:hover {
+  background-color: #0056b3;
+  color: white;
+}
+.previous-gallery-title {
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 30px;
+}
+
+.previous-gallery-title h2 {
+  font-size: 32px; /* 글씨 크기를 크게 설정 */
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+}
+.previous-gallery {
+  display: flex;
+  overflow-x: auto; /* 가로 스크롤 활성화 */
+  gap: 10px; /* 이미지 사이 간격 */
+  padding: 10px 0;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.previous-gallery img {
+  width: 150px; /* 이미지 너비 설정 */
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.2s;
+}
+
+.previous-gallery img:hover {
+  transform: scale(1.05); /* 호버 시 이미지 확대 효과 */
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: none; /* 초기에는 숨김 */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: aqua;
+}
+
+.footer {
+  background-color: #4a4a63;
+  color: #fff;
+  padding: 20px;
+  width: 69vw;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-right: 20px; /* 로고와 텍스트 사이의 간격 */
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  flex-grow: 1; /* 텍스트가 중앙에 위치하도록 확장 */
+}
