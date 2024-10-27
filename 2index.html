@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한라대학교 IT소프트웨어학과</title>
+  <link rel="stylesheet" href="1styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top"></div>
+    <div class="header-bottom">
+      <img src="https://itsoft.halla.ac.kr/img/common/han_logo.png" alt="한라대학교 로고" class="logo">
+      <nav>
+        <a href="#">학과소개</a>
+        <a href="#">학사안내</a>
+        <a href="#">게시판</a>
+        <a href="#">공지사항</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery-header-container">
+      <div class="gallery-header">
+        <h1>학과 Q&A</h1>
+        <div class="sub-menu">
+          <a href="https://www.instagram.com/halla_it_software/" target="_blank">학과 SNS</a>
+          <a href="#">포토갤러리</a>
+          <a href="#">자유게시판</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter">
+      <!-- 첫 번째 전체 버튼 -->
+      <div class="dropdown">
+        <button id="dropdown-button-1" onclick="toggleDropdown('dropdown-content-1')" class="dropdown-button">전체</button>
+        <div id="dropdown-content-1" class="dropdown-content">
+          <a href="#">전체</a>
+          <a href="#">내용</a>
+          <a href="#">제목</a>
+        </div>
+      </div>
+
+      <button class="mint-button">등록</button>
+
+      <!-- 세 번째 전체 버튼 -->
+      <div class="dropdown">
+        <button id="dropdown-button-2" onclick="toggleDropdown('dropdown-content-2')" class="dropdown-button">전체</button>
+        <div id="dropdown-content-2" class="dropdown-content">
+          <a href="#">전체</a>
+          <a href="#">내용</a>
+          <a href="#">제목</a>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="검색">
+        <button class="search-button">
+          <img src="https://itsoft.halla.ac.kr/img/common/pro_search.png" alt="검색 아이콘">
+        </button>
+      </div>
+    </div>
+
+    <!-- 학과 Q&A 게시판 -->
+    <section class="qna-board">
+      <table class="qna-table">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>등록일</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>1</td>
+              <td>맥날 vs 롯데</td>
+              <td><strong>익명</strong></td>
+              <td>2024-10-27</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>맥날 vs 롯데</td>
+              <td><strong>익명</strong></td>
+              <td>2024-10-27</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>맥날 vs 롯데</td>
+              <td><strong>익명</strong></td>
+              <td>2024-10-27</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>맥날 vs 롯데</td>
+              <td><strong>익명</strong></td>
+              <td>2024-10-27</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>맥날 vs 롯데</td>
+              <td><strong>익명</strong></td>
+              <td>2024-10-27</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>맥날 vs 롯데</td>
+                <td><strong>익명</strong></td>
+                <td>2024-10-27</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>맥날 vs 롯데</td>
+                <td><strong>익명</strong></td>
+                <td>2024-10-27</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>맥날 vs 롯데</td>
+                <td><strong>익명</strong></td>
+                <td>2024-10-27</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>맥날 vs 롯데</td>
+                <td><strong>익명</strong></td>
+                <td>2024-10-27</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>맥날 vs 롯데</td>
+                <td><strong>익명</strong></td>
+                <td>2024-10-27</td>
+              </tr>
+          </tbody>
+    </section>
+    <!-- 페이지네이션 -->
+  <div class="pagination">
+    <button class="pagination-btn">«</button>
+    <button class="pagination-btn">‹</button>
+    <button class="pagination-btn">1</button>
+    <button class="pagination-btn">›</button>
+    <button class="pagination-btn">»</button>
+  </div>
+
+<!-- Instagram 버튼 -->
+<a href="https://www.instagram.com/halla_it_software/" target="_blank" id="instagramBtn" class="scroll-to-top">
+    <img src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_1280.jpg" alt="Instagram 로고" class="instagram-logo">
+  </a>
+  
+  <!-- 위로 이동 버튼 -->
+  <button id="scrollToTopBtn" class="scroll-to-top">▲</button>
+  
+  </main>
+  <script src="1script.js"></script>
+</body>
+</html>
