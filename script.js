@@ -58,3 +58,33 @@ document.getElementById("scrollToTopBtn").onclick = function() {
     behavior: "smooth"
   });
 };
+// 드롭다운 메뉴 표시 및 선택한 항목으로 버튼 텍스트 변경
+function toggleDropdown(dropdownId) {
+  const dropdownContent = document.getElementById(dropdownId);
+  dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+}
+
+// 드롭다운 메뉴 항목 선택 시 버튼 텍스트 변경 함수
+function setDropdownText(buttonId, text) {
+  const button = document.getElementById(buttonId);
+  button.textContent = text;
+}
+
+// 이벤트 리스너 추가
+document.addEventListener("DOMContentLoaded", () => {
+  // 첫 번째 드롭다운
+  document.querySelectorAll("#dropdown-content-1 a").forEach(item => {
+    item.addEventListener("click", (event) => {
+      setDropdownText("dropdown-button-1", event.target.textContent);
+      toggleDropdown("dropdown-content-1");
+    });
+  });
+
+  // 세 번째 드롭다운
+  document.querySelectorAll("#dropdown-content-2 a").forEach(item => {
+    item.addEventListener("click", (event) => {
+      setDropdownText("dropdown-button-2", event.target.textContent);
+      toggleDropdown("dropdown-content-2");
+    });
+  });
+});
